@@ -23,7 +23,7 @@
   "author": "Lafaiete Machado <lafaiete.machado@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/lafaietemachado/cypress-basico-v2#readme",
-  "dependencies": {
+  "devDependencies": {
     "cypress": "^10.8.0"
   }
 }
