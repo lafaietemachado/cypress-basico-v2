@@ -1,7 +1,5 @@
 /// <reference types="cypress" />
 
-const { should } = require("chai")
-
 describe('Central de Atendimento ao Cliente TAT', () => {
 
     beforeEach(() => {
@@ -180,10 +178,10 @@ describe('Central de Atendimento ao Cliente TAT', () => {
     it('faz uma requisição HTTP', () => {
         cy.request('https://cac-tat.s3.eu-central-1.amazonaws.com/index.html')
         .should(function(response) {
-            const { status, statusText, body } = response
-            expect(status).to.equal(200)
-            expect(statusText).to.equal('OK')
-            expect(body).to.equal('CAC TAT')
+          const { status, statusText, body } = response
+          expect(status).to.equal(200)
+          expect(statusText).to.equal('OK')
+          expect(body).to.include('CAC TAT')
         })
     })
 
@@ -193,7 +191,7 @@ describe('Central de Atendimento ao Cliente TAT', () => {
             .should('be.visible')
         cy.get('#title')
             .invoke('text', 'CAT TAT')
-        cy.get('#subtite')
+        cy.get('#subtitle')
             .invoke('text', 'Eu amo gatos' )
     })
 })
